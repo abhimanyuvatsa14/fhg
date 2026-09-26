@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://chiiwdqf2ce8t"]
+
+[ext_resource type="Texture2D" uid="uid://bahvfspve6c2f" path="res://assets/sprites/tileset/Texture/TX Tileset Stone Ground.png" id="1_2ndx6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4lci"]
+size = Vector2(96, 96)
+
+[node name="dotted squre" type="AnimatableBody2D" unique_id=968006459]
+
+[node name="StoneGround" type="Sprite2D" parent="." unique_id=1932453450]
+texture = ExtResource("1_2ndx6")
+region_enabled = true
+region_rect = Rect2(160, 0, 96, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=269105090]
+shape = SubResource("RectangleShape2D_q4lci")
