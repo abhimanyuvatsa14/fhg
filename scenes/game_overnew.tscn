@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cy34eo26dvors"]
+
+[ext_resource type="PackedScene" uid="uid://c65l1mc6m1oc0" path="res://scenes/game_over.tscn" id="1_eu165"]
+
+[node name="Game over" unique_id=1983112896 instance=ExtResource("1_eu165")]
