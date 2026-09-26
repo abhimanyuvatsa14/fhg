@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cnm3at6bidt06"]
+
+[ext_resource type="PackedScene" uid="uid://cbb612ann8p70" path="res://scenes/main_menu_2.tscn" id="1_hy767"]
+[ext_resource type="Script" uid="uid://c6gdyexnqohxr" path="res://scripts/main_menu_2_new.gd" id="2_egqgv"]
+
+[node name="main menu 2" unique_id=1671511038 instance=ExtResource("1_hy767")]
+script = ExtResource("2_egqgv")
+
+[connection signal="pressed" from="VBoxContainer/eazy" to="." method="_on_eazy_pressed"]
+[connection signal="pressed" from="VBoxContainer/normal" to="." method="_on_normal_pressed"]
+[connection signal="pressed" from="VBoxContainer/hard" to="." method="_on_hard_pressed"]
