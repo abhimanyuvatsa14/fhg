@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://tvxhndoj3bd8"]
+
+[ext_resource type="Script" uid="uid://dddh0uee25klw" path="res://scripts/potion.gd" id="1_le10y"]
+[ext_resource type="Texture2D" uid="uid://c12054ts0544i" path="res://assets/sprites/potion_set_64x64/round_potion.png" id="2_itmmj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le10y"]
+atlas = ExtResource("2_itmmj")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itmmj"]
+atlas = ExtResource("2_itmmj")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mc24"]
+atlas = ExtResource("2_itmmj")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kk5y"]
+atlas = ExtResource("2_itmmj")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ql73s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le10y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itmmj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mc24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kk5y")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v0s4m"]
+radius = 22.561028
+
+[node name="potion" type="Area2D" unique_id=74708035]
+collision_mask = 2
+script = ExtResource("1_le10y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=881463115]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_ql73s")
+frame_progress = 0.4306955
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1431233529]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_v0s4m")
