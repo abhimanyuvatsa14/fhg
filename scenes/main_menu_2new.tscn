@@ -6,6 +6,41 @@
 [node name="main menu 2" unique_id=1671511038 instance=ExtResource("1_hy767")]
 script = ExtResource("2_egqgv")
 
+[node name="Label" type="Label" parent="VBoxContainer/eazy" parent_id_path=PackedInt32Array(104284204) index="0" unique_id=1730533555]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 56.0
+offset_right = 347.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(2.5990605e-06, 0.901609, 0.5188234, 1)
+theme_override_font_sizes/font_size = 8
+text = "(MORE HEALTH AND LESS ENEMIES)"
+
+[node name="Label" type="Label" parent="VBoxContainer/normal" parent_id_path=PackedInt32Array(575954393) index="0" unique_id=1673952211]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 56.0
+offset_right = 347.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(0.7647059, 0.45490196, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "(LESS POTIONS BUT MORE ENEMIES"
+
+[node name="hard" parent="VBoxContainer" parent_id_path=PackedInt32Array(1911712512) index="2" unique_id=790108185]
+text = "HARD
+
+"
+
+[node name="Label" type="Label" parent="VBoxContainer/hard" index="0" unique_id=603946865]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 56.0
+offset_right = 367.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(0.8018113, 0.15662321, 0.2271044, 1)
+theme_override_font_sizes/font_size = 8
+text = "(LESS HEALTH, MORE POTIONS AND ENEMIES)"
+
 [connection signal="pressed" from="VBoxContainer/eazy" to="." method="_on_eazy_pressed"]
 [connection signal="pressed" from="VBoxContainer/normal" to="." method="_on_normal_pressed"]
 [connection signal="pressed" from="VBoxContainer/hard" to="." method="_on_hard_pressed"]
