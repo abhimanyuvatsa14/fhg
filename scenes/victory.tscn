@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://1jrppix4b71w"]
+
+[ext_resource type="Script" uid="uid://dqsmxelbr2ncy" path="res://scripts/control.gd" id="1_faxov"]
+[ext_resource type="Texture2D" uid="uid://b2ipljn55kttw" path="res://assets/sprites/ff0703a08d286b5e67da95816863c374.jpg" id="2_hl81x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlbda"]
+bg_color = Color(0.6, 0.6, 0.6, 0.4862745)
+
+[node name="victory" type="Control" unique_id=1235058182]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 576.0
+offset_top = 323.0
+offset_right = 576.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_faxov")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1934740318]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1466419292]
+offset_left = 392.0
+offset_top = 388.0
+offset_right = 769.0
+offset_bottom = 571.0
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1804238259]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlbda")
+text = "Return To Main Menu"
+
+[node name="Ff0703a08d286b5e67Da95816863c374" type="Sprite2D" parent="." unique_id=513553374]
+position = Vector2(5, 0)
+scale = Vector2(1.5597826, 1.5531402)
+texture = ExtResource("2_hl81x")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1292322060]
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]
