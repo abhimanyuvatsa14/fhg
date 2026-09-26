@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://2y62l23y4vre"]
+
+[ext_resource type="Texture2D" uid="uid://bxilcoh8ef52v" path="res://assets/sprites/3c37f252a137532052162372e221d04e.jpg" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://cs0pkiv7daqfy" path="res://scripts/main_menu.gd" id="1_fu7sn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ycj30"]
+texture = ExtResource("1_7vrkn")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rceul"]
+bg_color = Color(0, 0, 0, 0.58431375)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jyoo"]
+bg_color = Color(0, 0, 0, 0.58431375)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="main menu" type="Control" unique_id=1028610884]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fu7sn")
+
+[node name="Panel" type="Panel" parent="." unique_id=2119847966]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ycj30")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1547879624]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 308.0
+offset_top = 248.0
+offset_right = 860.0
+offset_bottom = 461.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="start" type="Button" parent="VBoxContainer" unique_id=1021556293]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_rceul")
+text = "START GAME"
+
+[node name="exit" type="Button" parent="VBoxContainer" unique_id=1725227551]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_4jyoo")
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
