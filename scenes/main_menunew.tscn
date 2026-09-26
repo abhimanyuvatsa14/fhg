@@ -3,3 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://2y62l23y4vre" path="res://scenes/main_menu.tscn" id="1_fojua"]
 
 [node name="main menu" unique_id=1028610884 instance=ExtResource("1_fojua")]
+
+[node name="Label" type="Label" parent="." index="2" unique_id=1195855159]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 109.0
+offset_right = 988.0
+offset_bottom = 233.0
+theme_override_colors/font_color = Color(0.84619606, 0.18676028, 0.262609, 1)
+theme_override_font_sizes/font_size = 90
+text = "SHARDS OF LIGHT"
