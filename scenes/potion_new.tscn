@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://qygbglqj2wp2"]
+
+[ext_resource type="PackedScene" uid="uid://tvxhndoj3bd8" path="res://scenes/potion.tscn" id="1_0paom"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_taq4k"]
+radius = 32.0
+
+[node name="potion" unique_id=74708035 instance=ExtResource("1_0paom")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=881463115]
+position = Vector2(12, -12.5)
+scale = Vector2(1.375, 1.359375)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1431233529]
+position = Vector2(13, 6)
+shape = SubResource("CircleShape2D_taq4k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
